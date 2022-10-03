@@ -21,23 +21,11 @@ export const presets = {
     bold: BOLD,
     h1: {
         ...BOLD,
-        fontSize: 32
-    },
-    h2: {
-        ...BOLD,
-        fontSize: 28
-    },
-    h3: {
-        ...BASE_BOLD,
-        fontSize: 24
-    },
-    h4: {
-        ...BASE,
-        fontSize: 16,
+        fontSize: 34,
     },
     small: {
         ...BASE,
-        fontSize: 14,
+        fontSize: 17,
         color:colors.gray
     }
 }
