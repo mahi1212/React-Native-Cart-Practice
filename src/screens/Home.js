@@ -6,7 +6,8 @@ import { colors } from '../theme/colors'
 import { spacing } from '../theme/spacing'
 // import logo from '../svg/LOGO.png'
 
-export default function Home() {
+export default function Home({navigation}) {
+    // const navigation = useNavigation(); 
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
@@ -36,12 +37,12 @@ export default function Home() {
                         When placing an order, select the option “Contactless delivery” and the courier will leave your order at the door.
                     </Text>
                     {/* Button */}
-                    <Pressable style={styles.button}>
-                        <Text style={{color:colors.white}}>ORDER NOW</Text>
+                    <Pressable style={styles.button} onPress={() => navigation.navigate('Item')}>
+                        <Text style={{ color: colors.white }}>ORDER NOW</Text>
                     </Pressable>
                     {/* dismiss */}
-                    <Pressable style={styles.dismiss}>
-                        <Text style={{color: colors.gray}}>DISMISS</Text>
+                    <Pressable style={styles.dismiss} >
+                        <Text style={{ color: colors.gray }}>DISMISS</Text>
                     </Pressable>
                 </View>
             </ScrollView>
@@ -82,21 +83,21 @@ const styles = StyleSheet.create({
     },
     infoText: {
         // color:colors.gray,
-        textAlign:'center',
+        textAlign: 'center',
         marginVertical: spacing[8]
     },
     button: {
         backgroundColor: "#0BCE70",
         padding: spacing[3],
-        alignItems:'center',
+        alignItems: 'center',
         marginHorizontal: spacing[5],
-        borderRadius:5
+        borderRadius: 5
     },
-    dismiss:{
+    dismiss: {
         // backgroundColor: "#0BCE70",
         padding: spacing[3],
-        alignItems:'center',
+        alignItems: 'center',
         marginHorizontal: spacing[5],
-        marginTop:10
+        marginTop: 10
     }
 })
