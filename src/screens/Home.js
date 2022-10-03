@@ -17,6 +17,7 @@ export default function Home({navigation}) {
                         style={styles.logo}
                         source={require('../svg/LOGO.png')}
                     />
+                    <Text style={{marginTop: 75, fontSize: 24, marginLeft: -20}} preset='h1'> Mahinur Rahman</Text>
                 </View>
                 {/* Delivery part */}
                 <View style={styles.deliveryView}>
@@ -57,7 +58,8 @@ const styles = StyleSheet.create({
     },
     upperView: {
         backgroundColor: '#A259FF',
-        height: 310
+        height: 310,
+        flexDirection:'row'
     },
     logo: {
         marginTop: spacing[10]
@@ -87,7 +89,7 @@ const styles = StyleSheet.create({
         marginVertical: spacing[8]
     },
     button: {
-        backgroundColor: "#0BCE70",
+        backgroundColor: "#0BCE10",
         padding: spacing[3],
         alignItems: 'center',
         marginHorizontal: spacing[5],
